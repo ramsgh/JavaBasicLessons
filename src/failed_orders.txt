@@ -1,0 +1,2 @@
+2026-08-31 09:18:04 | ORDER_8902 | Anand   |  Rs1200.00 | FAILED | Insufficient funds
+2026-08-31 09:35:45 | ORDER_8904 | Balan | Rs7500.25 | FAILED | Timeout waiting for gateway response
