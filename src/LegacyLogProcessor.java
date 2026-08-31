@@ -5,10 +5,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class LegacyLogProcessor {
     public static void main(String[] args) {
-        File inputFile = new File("transactions.txt");
-        File outputFile = new File("failed_orders.txt");
+        File inputFile = new File("src/transactions.txt");
+        File outputFile = new File("src/failed_orders.txt");
 
         BufferedReader reader = null;
         BufferedWriter writer = null;
@@ -18,16 +19,18 @@ public class LegacyLogProcessor {
             writer = new BufferedWriter(new FileWriter(outputFile));
 
             String line;
+
             while ((line = reader.readLine()) != null) {
                 if (line.contains("FAILED")) {
                     writer.write(line);
                     writer.newLine();
                 }
             }
-            System.out.println("Failed orders processed using IO.");
+            System.out.println("Failed orders processed using IO Process.");
 
         } catch (IOException e) {
             System.out.println("An error occurred: " + e.getMessage());
+
         } finally {
             // Must manually close streams to avoid memory/file locks
             try {
